@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: Eureka-Server
+
+server:
+  port: 1111
+
+# 作为服务中心配置，并将serviceUrl指向peer2
+eureka:
+  instance:
+    hostname: peer1
+  client:
+    serviceUrl:
+      defaultZone: http://peer2:1112/eureka/
+
+
